@@ -2,7 +2,7 @@
   "identity": "ngo",
   "globaId": "ngos",
   "autoPK": true,
-  "connection": "permanent",
+  "connection": "document",
   "autoCreatedAt": true,
   "autoUpdatedAt": true,
   "tableName": "ngos",

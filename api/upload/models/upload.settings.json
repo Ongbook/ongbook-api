@@ -1,6 +1,6 @@
 {
   "identity": "upload",
-  "connection": "default",
+  "connection": "document",
   "schema": true,
   "limit": 20,
   "defaultTemplate": "default",

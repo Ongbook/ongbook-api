@@ -2,7 +2,7 @@
   "identity": "demand",
   "globaId": "demands",
   "autoPK": true,
-  "connection": "permanent",
+  "connection": "document",
   "autoCreatedAt": true,
   "autoUpdatedAt": true,
   "tableName": "demands",

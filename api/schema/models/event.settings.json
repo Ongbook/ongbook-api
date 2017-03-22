@@ -2,7 +2,7 @@
   "identity": "event",
   "globaId": "events",
   "autoPK": true,
-  "connection": "permanent",
+  "connection": "document",
   "autoCreatedAt": true,
   "autoUpdatedAt": true,
   "tableName": "events",

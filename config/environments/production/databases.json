@@ -1,21 +1,40 @@
 {
   "orm": {
     "adapters": {
-      "disk": "sails-disk"
+      "disk": "sails-disk",
+      "mongo": "sails-mongo",
+      "redis": "sails-redis",
+      "postgre": "sails-postgresql",
+      "orient": "sails-orientdb"
     },
-    "defaultConnection": "default",
+    "defaultConnection": "disk",
     "connections": {
-      "default": {
+      "disk": {
         "adapter": "disk",
-        "filePath": ".tmp/",
-        "fileName": "default.db",
-        "migrate": "safe"
+        "filePath": "./data/production/",
+        "fileName": "database.db",
+        "migrate": "alter"
       },
-      "permanent": {
-        "adapter": "disk",
-        "filePath": "./data/",
-        "fileName": "permanent.db",
-        "migrate": "safe"
+      "document": {
+        "adapter": "mongo",
+        "url": "${process.env.MONGO_URL || 'mongodb://localhost:27017/ongbook-api-strapi'}",
+        "migrate": "alter"
+      },
+      "cache": {
+        "adapter": "redis",
+        "url": "${process.env.REDIS_URL || 'redis://localhost:6379'}"
+      },
+      "relational": {
+        "adapter": "postgre",
+        "url": "${process.env.POSTEGRE_URL || 'postgresql://localhost:5433/ongbook-api-strapi'}"
+      },
+      "graph": {
+        "adapter": "orient",
+        "host": "${process.env.ORIENT_HOST || 'localhost'",
+        "port": "${process.env.ORIENT_PORT || 2424 }",
+        "user": "${process.env.ORIENT_USER || 'admin'}",
+        "password": "${process.env.ORIENT_PASSWORD || 'admin'}",
+        "database": "${process.env.ORIENT_DATABASE || 'ongbook-api-strapi'}"
       }
     }
   }

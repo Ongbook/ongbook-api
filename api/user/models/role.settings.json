@@ -1,6 +1,6 @@
 {
   "identity": "role",
-  "connection": "permanent",
+  "connection": "document",
   "displayedAttribute": "name",
   "schema": true,
   "attributes": {

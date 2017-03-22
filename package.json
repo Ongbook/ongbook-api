@@ -1,11 +1,11 @@
 {
   "name": "ongbook-api-strapi",
-  "private": true,
   "version": "0.1.0",
-  "description": "A Strapi application.",
+  "description": "An API to catalog NGOs and connect with volunteers.",
   "dependencies": {
     "anchor": "~0.10.5",
     "async": "~1.5.0",
+    "babel": "^6.23.0",
     "bcryptjs": "~2.3.0",
     "co-busboy": "~1.3.1",
     "jsonwebtoken": "~5.4.1",
@@ -13,37 +13,33 @@
     "nodemailer": "~1.10.0",
     "purest": "~2.0.0",
     "sails-disk": "~0.10.8",
+    "sails-mongo": "^0.12.2",
+    "sails-orientdb": "^0.10.60",
+    "sails-postgresql": "^0.11.4",
+    "sails-redis": "^0.10.7",
     "socket.io": "~1.3.7",
-    "waterline": "~0.10.28",
-    "strapi": "~1.5.5"
-  },
-  "devDependencies": {
-    "strapi-generate": "~1.5.0",
-    "strapi-generate-api": "~1.5.0",
-    "strapi-generate-email": "~1.5.0",
-    "strapi-generate-new": "~1.5.0",
-    "strapi-generate-upload": "~1.5.0",
-    "strapi-generate-users": "~1.5.0"
+    "strapi": "~1.5.5",
+    "waterline": "~0.10.28"
   },
   "main": "./server.js",
   "scripts": {
     "start": "node --harmony server.js"
   },
   "author": {
-    "name": "ubuntu",
-    "email": "email+c9.io@gustavorps.net",
-    "url": ""
+    "name": "GustavoRPS",
+    "email": "email+ongbook.org@gustavorps.net",
+    "url": "https://github.com/GustavoRPS"
   },
   "maintainers": [
     {
-      "name": "ubuntu",
-      "email": "email+c9.io@gustavorps.net",
-      "url": ""
+      "name": "GustavoRPS",
+      "email": "email+ongbook.org@gustavorps.net",
+      "url": "https://github.com/GustavoRPS"
     }
   ],
   "engines": {
-    "node": ">= 0.12.0",
-    "npm": ">= 2.0.0"
+    "node": ">= 6.10.0",
+    "npm": ">= 3.10.10"
   },
   "license": "MIT"
 }

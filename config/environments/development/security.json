@@ -37,7 +37,7 @@
       "Authorization"
     ]
   },
-  "ssl": true,
+  "ssl": false,
   "ip": {
     "whiteList": [],
     "blackList": []

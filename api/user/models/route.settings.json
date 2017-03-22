@@ -1,6 +1,6 @@
 {
   "identity": "route",
-  "connection": "permanent",
+  "connection": "document",
   "displayName": "name",
   "schema": true,
   "displayedAttribute": "name",

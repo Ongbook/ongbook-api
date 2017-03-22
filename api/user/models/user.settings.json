@@ -1,7 +1,7 @@
 {
   "identity": "user",
   "globaId": "users",
-  "connection": "default",
+  "connection": "document",
   "schema": true,
   "limit": 20,
   "defaultTemplate": "default",
