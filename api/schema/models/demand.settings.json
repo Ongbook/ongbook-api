@@ -1,0 +1,148 @@
+{
+  "identity": "demand",
+  "globaId": "demands",
+  "autoPK": true,
+  "connection": "permanent",
+  "autoCreatedAt": true,
+  "autoUpdatedAt": true,
+  "tableName": "demands",
+  "schema": true,
+  "displayedAttribute": "name",
+  "attributes": {
+    "additionalType": {
+      "type": "string"
+    },
+    "alternateName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "disambiguatingDescription": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "mainEntityOfPage": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "potentialAction": {
+      "type": "json"
+    },
+    "url": {
+      "type": "string"
+    },
+    "acceptedPaymentMethod": {
+      "type": "json"
+    },
+    "advanceBookingRequirement": {
+      "type": "json"
+    },
+    "areaServed": {
+      "type": "json"
+    },
+    "availability": {
+      "type": "json"
+    },
+    "availabilityEnds": {
+      "type": "date"
+    },
+    "availabilityStarts": {
+      "type": "date"
+    },
+    "availableAtOrFrom": {
+      "type": "json"
+    },
+    "availableDeliveryMethod": {
+      "type": "json"
+    },
+    "businessFunction": {
+      "type": "json"
+    },
+    "deliveryLeadTime": {
+      "type": "json"
+    },
+    "eligibleCustomerType": {
+      "type": "json"
+    },
+    "eligibleDuration": {
+      "type": "json"
+    },
+    "eligibleQuantity": {
+      "type": "json"
+    },
+    "eligibleRegion": {
+      "type": "json"
+    },
+    "eligibleTransactionVolume": {
+      "type": "json"
+    },
+    "gtin12": {
+      "type": "string"
+    },
+    "gtin13": {
+      "type": "string"
+    },
+    "gtin14": {
+      "type": "string"
+    },
+    "gtin8": {
+      "type": "string"
+    },
+    "includesjson": {
+      "type": "json"
+    },
+    "ineligibleRegion": {
+      "type": "json"
+    },
+    "inventoryLevel": {
+      "type": "json"
+    },
+    "itemCondition": {
+      "type": "json"
+    },
+    "itemOffered": {
+      "type": "json"
+    },
+    "mpn": {
+      "type": "json"
+    },
+    "priceSpecification": {
+      "type": "json"
+    },
+    "seller": {
+      "type": "json"
+    },
+    "seeker": {
+      "model": "ngo",
+      "required": true
+    },
+    "managers": {
+      "collection": "user",
+      "via": "demands"
+    },
+    "serialNumber": {
+      "type": "string"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "validFrom": {
+      "type": "date"
+    },
+    "validThrough": {
+      "type": "date"
+    },
+    "warranty": {
+      "type": "json"
+    }
+  },
+  "autoPK": true,
+  "autoCreatedAt": true,
+  "autoUpdatedAt": true
+}

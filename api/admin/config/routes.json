@@ -1,0 +1,64 @@
+{
+  "routes": {
+    "GET /admin/config": {
+      "controller": "Config",
+      "action": "index",
+      "policies": []
+    },
+    "GET /admin/routes": {
+      "controller": "Route",
+      "action": "find"
+    },
+    "PUT /admin/routes": {
+      "controller": "Route",
+      "action": "update",
+      "policies": [
+        "authorized"
+      ]
+    },
+    "GET /admin/explorer/:model": {
+      "controller": "Explorer",
+      "action": "find",
+      "policies": [
+        "authorized"
+      ]
+    },
+    "GET /admin/explorer/:model/count": {
+      "controller": "Explorer",
+      "action": "count",
+      "policies": [
+        "authorized"
+      ]
+    },
+    "GET /admin/explorer/:model/:id": {
+      "controller": "Explorer",
+      "action": "findOne",
+      "policies": [
+        "authorized"
+      ]
+    },
+    "POST /admin/explorer/:model": {
+      "controller": "Explorer",
+      "action": "create",
+      "policies": [
+        "authorized",
+        "create"
+      ]
+    },
+    "PUT /admin/explorer/:model/:id": {
+      "controller": "Explorer",
+      "action": "update",
+      "policies": [
+        "authorized",
+        "update"
+      ]
+    },
+    "DELETE /admin/explorer/:model/:id": {
+      "controller": "Explorer",
+      "action": "destroy",
+      "policies": [
+        "authorized"
+      ]
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "routes": {
+    "POST /upload": {
+      "controller": "upload",
+      "action": "upload",
+      "policies": [
+        "create",
+        "authenticated"
+      ]
+    }
+  }
+}

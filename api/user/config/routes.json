@@ -1,0 +1,85 @@
+{
+  "routes": {
+    "GET /user": {
+      "controller": "user",
+      "action": "find",
+      "policies": [
+        "authorized"
+      ]
+    },
+    "GET /user/:id": {
+      "controller": "user",
+      "action": "findOne",
+      "policies": [
+        "authorized"
+      ]
+    },
+    "POST /user": {
+      "controller": "user",
+      "action": "create",
+      "policies": [
+        "authorized",
+        "create",
+        "delete"
+      ]
+    },
+    "PUT /user/:id": {
+      "controller": "user",
+      "action": "update",
+      "policies": [
+        "authorized",
+        "update",
+        "delete"
+      ]
+    },
+    "DELETE /user/:id": {
+      "controller": "user",
+      "action": "destroy",
+      "policies": [
+        "authorized"
+      ]
+    },
+    "POST /user/:parentId/:relation": {
+      "controller": "user",
+      "action": "add",
+      "policies": [
+        "authorized",
+        "create",
+        "addOrRemove"
+      ]
+    },
+    "DELETE /user/:parentId/:relation/:id": {
+      "controller": "user",
+      "action": "remove",
+      "policies": [
+        "authorized",
+        "update",
+        "addOrRemove"
+      ]
+    },
+    "POST /auth/logout": {
+      "controller": "auth",
+      "action": "logout"
+    },
+    "POST /auth/forgot-password": {
+      "controller": "auth",
+      "action": "forgotPassword"
+    },
+    "POST /auth/change-password": {
+      "controller": "auth",
+      "action": "changePassword"
+    },
+    "POST /auth/local": {
+      "controller": "auth",
+      "action": "callback"
+    },
+    "POST /auth/local/register": {
+      "controller": "auth",
+      "action": "register"
+    },
+    "GET /auth/:provider/callback": {
+      "controller": "auth",
+      "action": "callback"
+    }
+  }
+}

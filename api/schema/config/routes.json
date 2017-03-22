@@ -1,0 +1,112 @@
+{
+  "routes": {
+    "GET /ngo": {
+      "controller": "ngo",
+      "action": "find",
+      "policies": [
+        "authorized"
+      ]
+    },
+    "GET /ngo/:id": {
+      "controller": "ngo",
+      "action": "findOne",
+      "policies": [
+        "authorized"
+      ]
+    },
+    "POST /ngo": {
+      "controller": "ngo",
+      "action": "create",
+      "policies": [
+        "authorized",
+        "create"
+      ]
+    },
+    "PUT /ngo/:id": {
+      "controller": "ngo",
+      "action": "update",
+      "policies": [
+        "authorized",
+        "update"
+      ]
+    },
+    "DELETE /ngo/:id": {
+      "controller": "ngo",
+      "action": "destroy",
+      "policies": [
+        "authorized"
+      ]
+    },
+    "POST /ngo/:parentId/:relation": {
+      "controller": "ngo",
+      "action": "add",
+      "policies": [
+        "authorized",
+        "create"
+      ]
+    },
+    "DELETE /ngo/:parentId/:relation/:id": {
+      "controller": "ngo",
+      "action": "remove",
+      "policies": [
+        "authorized",
+        "update"
+      ]
+    },
+    
+    
+    "GET /demands": {
+      "controller": "demand",
+      "action": "find",
+      "policies": [
+        "authorized"
+      ]
+    },
+    "GET /demands/:id": {
+      "controller": "demand",
+      "action": "findOne",
+      "policies": [
+        "authorized"
+      ]
+    },
+    "POST /demands": {
+      "controller": "demand",
+      "action": "create",
+      "policies": [
+        "authorized",
+        "create"
+      ]
+    },
+    "PUT /demands/:id": {
+      "controller": "demand",
+      "action": "update",
+      "policies": [
+        "authorized",
+        "update"
+      ]
+    },
+    "DELETE /ngdemandso/:id": {
+      "controller": "demand",
+      "action": "destroy",
+      "policies": [
+        "authorized"
+      ]
+    },
+    "POST /demands/:parentId/:relation": {
+      "controller": "demand",
+      "action": "add",
+      "policies": [
+        "authorized",
+        "create"
+      ]
+    },
+    "DELETE /demands/:parentId/:relation/:id": {
+      "controller": "demand",
+      "action": "remove",
+      "policies": [
+        "authorized",
+        "update"
+      ]
+    }
+  }
+}
