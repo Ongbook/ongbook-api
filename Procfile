@@ -1,0 +1,1 @@
+web: strapi start
