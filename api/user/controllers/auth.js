@@ -1,13 +1,7 @@
 'use strict';
+/* global strapi User */
 
-/**
- * Module dependencies
- */
-
-// Node.js core.
 const crypto = require('crypto');
-
-// Public node modules.
 const _ = require('lodash');
 const anchor = require('anchor');
 
@@ -63,8 +57,10 @@ module.exports = {
       // Check if the user exists.
       try {
         const user = yield User.findOne(query);
-
+        
         if (!user) {
+          console.info("User don't exist!");
+          
           ctx.status = 403;
           return ctx.body = {
             message: 'Identifier or password invalid.'
@@ -82,6 +78,8 @@ module.exports = {
         const validPassword = user.validatePassword(params.password);
 
         if (!validPassword) {
+          console.info("Password don't match!");
+          
           ctx.status = 403;
           return ctx.body = {
             message: 'Identifier or password invalid.'
