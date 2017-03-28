@@ -59,8 +59,6 @@ module.exports = {
         const user = yield User.findOne(query);
         
         if (!user) {
-          console.info("User don't exist!");
-          
           ctx.status = 403;
           return ctx.body = {
             message: 'Identifier or password invalid.'
@@ -78,8 +76,6 @@ module.exports = {
         const validPassword = user.validatePassword(params.password);
 
         if (!validPassword) {
-          console.info("Password don't match!");
-          
           ctx.status = 403;
           return ctx.body = {
             message: 'Identifier or password invalid.'

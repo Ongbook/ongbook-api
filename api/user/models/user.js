@@ -1,18 +1,10 @@
 'use strict';
+/* global strapi _ */
 
-/**
- * Module dependencies
- */
-
-// Node.js core.
 const path = require('path');
-
-// Public node modules.
 const _ = require('lodash');
 const anchor = require('anchor');
 const bcrypt = require('bcryptjs');
-
-// Model settings
 const settings = require('./user.settings.json');
 
 /**
@@ -46,6 +38,7 @@ module.exports = {
     // Override toJSON instance method
     // to remove `password` and `resetPasswordToken` values.
     toJSON: () => {
+      console.info(this);
       const obj = this.toObject();
       delete obj.password;
       delete obj.resetPasswordToken;
