@@ -1,20 +1,20 @@
 {
   "routes": {
-    "GET /ngo": {
+    "GET /ngos": {
       "controller": "ngo",
       "action": "find",
       "policies": [
         "authorized"
       ]
     },
-    "GET /ngo/:id": {
+    "GET /ngos/:id": {
       "controller": "ngo",
       "action": "findOne",
       "policies": [
         "authorized"
       ]
     },
-    "POST /ngo": {
+    "POST /ngos": {
       "controller": "ngo",
       "action": "create",
       "policies": [
@@ -22,7 +22,7 @@
         "create"
       ]
     },
-    "PUT /ngo/:id": {
+    "PUT /ngos/:id": {
       "controller": "ngo",
       "action": "update",
       "policies": [
@@ -30,14 +30,14 @@
         "update"
       ]
     },
-    "DELETE /ngo/:id": {
+    "DELETE /ngos/:id": {
       "controller": "ngo",
       "action": "destroy",
       "policies": [
         "authorized"
       ]
     },
-    "POST /ngo/:parentId/:relation": {
+    "POST /ngos/:parentId/:relation": {
       "controller": "ngo",
       "action": "add",
       "policies": [
@@ -45,7 +45,7 @@
         "create"
       ]
     },
-    "DELETE /ngo/:parentId/:relation/:id": {
+    "DELETE /ngos/:parentId/:relation/:id": {
       "controller": "ngo",
       "action": "remove",
       "policies": [

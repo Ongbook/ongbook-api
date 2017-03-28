@@ -11,5 +11,8 @@ process.chdir(__dirname);
 
 (function () {
   const strapi = require('strapi');
+  strapi.on('hook:_config:loaded', () => {
+    strapi.config.orm = require('./config/environments/'+process.env.NODE_ENV+'/orm');
+  });
   strapi.start();
 })();

@@ -1,19 +1,14 @@
 'use strict';
+/* global strapi */
 
 const model = 'demand';
 
-/**
- * A set of functions called "actions" for `ongbook`
- */
-
 module.exports = {
 
-  /**
-   * Get ongbook entries.
+  /* Get Demands entries.
    *
-   * @return {Object|Array}
+   * @return {Array}
    */
-
   find: function * () {
     this.model = model;
     try {
@@ -24,12 +19,10 @@ module.exports = {
     }
   },
 
-  /**
-   * Get a specific ongbook.
+  /* Get a specific Demand.
    *
-   * @return {Object|Array}
+   * @return {Object}
    */
-
   findOne: function * () {
     this.model = model;
     try {
@@ -40,12 +33,10 @@ module.exports = {
     }
   },
 
-  /**
-   * Create a ongbook entry.
+  /* Create a Demand entry.
    *
    * @return {Object}
    */
-
   create: function * () {
     this.model = model;
     try {
@@ -56,12 +47,10 @@ module.exports = {
     }
   },
 
-  /**
-   * Update a ongbook entry.
+  /* Update a ongbook entry.
    *
    * @return {Object}
    */
-
   update: function * () {
     this.model = model;
     try {
@@ -72,12 +61,10 @@ module.exports = {
     }
   },
 
-  /**
-   * Destroy a ongbook entry.
+  /* Destroy a ongbook Demand.
    *
    * @return {Object}
    */
-
   destroy: function * () {
     this.model = model;
     try {
@@ -88,12 +75,10 @@ module.exports = {
     }
   },
 
-  /**
-   * Add an entry to a specific ongbook.
+  /* Add an entry to a specific Demand.
    *
    * @return {Object}
    */
-
   add: function * () {
     this.model = model;
     try {
@@ -104,12 +89,10 @@ module.exports = {
     }
   },
 
-  /**
-   * Remove a specific entry from a specific ongbook.
+  /* Remove a specific entry from a specific ongbook.
    *
    * @return {Object}
    */
-
   remove: function * () {
     this.model = model;
     try {

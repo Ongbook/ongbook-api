@@ -1,59 +1,43 @@
 'use strict';
+/* global strapi _ */
 
-/**
- * Module dependencies
- */
-
-// Public node modules.
 const async = require('async');
-
-// Local dependencies.
-const regex = require('../../../../node_modules/strapi/util/regex');
-
-/**
- * Creates Routes.
- */
+const regex = require('strapi/util/regex');
 
 exports.create = function () {
   const deferred = Promise.defer();
   const promises = [];
   const newRoutes = [];
-  let routesFound;
+  let routes;
 
   async.auto({
-    findRoutes: function (callback) {
+    findRoutes: function (cb) {
 
       // Find all routes.
       strapi.orm
         .collections
         .route
         .find()
-        .exec(function (err, routesFound) {
-          if (err) {
-            callback(err);
-          } else {
-            callback(null, routesFound);
-          }
+        .exec(function (err, routes) {
+          err ? cb(err) : cb(null, routes)
         });
     },
-    deleteRoutes: ['findRoutes', function (callback, results) {
-
-      // Async dependencies.
-      routesFound = results.findRoutes;
+    deleteRoutes: ['findRoutes', function (cb, results) {
+      routes = results.findRoutes;
 
       // Delete destroyed routes.
-      _.forEach(routesFound, function (routeFound) {
-        if (!strapi.config.routes[routeFound.name]) {
-          promises.push(strapi.orm.collections.route.destroy({id: routeFound.id}));
+      _.forEach(routes, function (route) {
+        if (!strapi.config.routes[route.name]) {
+          promises.push(strapi.orm.collections.route.destroy({id: route.id}));
         }
       });
 
-      callback(null);
+      cb(null);
     }],
-    updateOrCreateRoutes: ['findRoutes', function (callback, results) {
+    updateOrCreateRoutes: ['findRoutes', function (cb, results) {
 
       // Async dependencies.
-      routesFound = results.findRoutes;
+      routes = results.findRoutes;
       let verb;
 
       // Find or create routes.
@@ -63,7 +47,7 @@ exports.create = function () {
         // Check if the controller is a stringified function.
         route.controller = _.startsWith(route.controller, 'function') ? 'Specific function' : route.controller;
 
-        if (_.find(routesFound, {name: key})) {
+        if (_.find(routes, {name: key})) {
           promises.push(strapi.orm.collections.route.update({
             name: _.trim(key)
           }, {
@@ -85,7 +69,7 @@ exports.create = function () {
         }
       });
 
-      callback(null);
+      cb(null);
     }],
     execRoutesModifications: ['deleteRoutes', 'updateOrCreateRoutes', function (callback) {
 
