@@ -1,6 +1,5 @@
 {
   "identity": "user",
-  "globaId": "users",
   "connection": "document",
   "schema": true,
   "limit": 20,

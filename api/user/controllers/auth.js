@@ -73,6 +73,7 @@ module.exports = {
           };
         }
 
+        console.info(user);
         const validPassword = user.validatePassword(params.password);
 
         if (!validPassword) {
