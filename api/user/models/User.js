@@ -1,11 +1,19 @@
 'use strict';
-/* global strapi _ */
 
+/**
+ * Module dependencies
+ */
+
+// Node.js core.
 const path = require('path');
+
+// Public node modules.
 const _ = require('lodash');
 const anchor = require('anchor');
 const bcrypt = require('bcryptjs');
-const settings = require('./user.settings.json');
+
+// Model settings
+const settings = require('./User.settings.json');
 
 /**
  * User model
@@ -37,15 +45,14 @@ module.exports = {
   attributes: _.merge(settings.attributes, {
     // Override toJSON instance method
     // to remove `password` and `resetPasswordToken` values.
-    toJSON: () => {
-      console.info(this);
+    toJSON: function () {
       const obj = this.toObject();
       delete obj.password;
       delete obj.resetPasswordToken;
       return obj;
     },
     // Validate password.
-    validatePassword: (password) => {
+    validatePassword: function (password) {
       if (!this.password) {
         // The user has no password value.
         return false;
@@ -64,13 +71,11 @@ module.exports = {
    */
 
   // Before validate.
-  beforeValidate: (values, next) => {
+  beforeValidate: function (values, next) {
     const module = path.basename(__filename, '.js').toLowerCase();
 
     if (strapi.api.hasOwnProperty(module) && _.size(strapi.api[module].templates)) {
-      const template = _.includes(strapi.api[module].templates, values.template) 
-                          ? values.template 
-                          : strapi.models[module].defaultTemplate;
+      const template = _.includes(strapi.api[module].templates, values.template) ? values.template : strapi.models[module].defaultTemplate;
 
       // Set template with correct value
       values.template = template;
@@ -109,12 +114,12 @@ module.exports = {
   },
 
   // Before create.
-  beforeCreate: (user, next) => {
+  beforeCreate: function (user, next) {
     strapi.api.user.services.user.hashPassword(user, next);
   },
 
   // Before update.
-  beforeUpdate: (user, next) => {
+  beforeUpdate: function (user, next) {
     strapi.api.user.services.user.hashPassword(user, next);
   }
 };
