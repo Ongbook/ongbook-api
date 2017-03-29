@@ -1,6 +1,10 @@
 'use strict';
-/* global strapi User */
 
+/**
+ * Module dependencies
+ */
+
+// Public node modules
 const _ = require('lodash');
 const bcrypt = require('bcryptjs');
 const pluralize = require('pluralize');

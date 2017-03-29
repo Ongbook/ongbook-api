@@ -16,6 +16,6 @@
       ]
     }
   },
-  "gzip": true,
+  "gzip": false,
   "responseTime": true
 }
