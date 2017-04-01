@@ -1,6 +1,6 @@
 'use strict';
 
-const model = 'user';
+const model = 'User';
 
 /**
  * A set of functions called "actions" for `user`
