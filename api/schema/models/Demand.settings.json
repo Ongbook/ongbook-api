@@ -122,10 +122,6 @@
       "model": "ngo",
       "required": true
     },
-    "managers": {
-      "collection": "user",
-      "via": "demands"
-    },
     "serialNumber": {
       "type": "string"
     },
@@ -140,9 +136,10 @@
     },
     "warranty": {
       "type": "json"
+    },
+    "role": {
+      "collection": "role",
+      "via": "demand"
     }
-  },
-  "autoPK": true,
-  "autoCreatedAt": true,
-  "autoUpdatedAt": true
+  }
 }

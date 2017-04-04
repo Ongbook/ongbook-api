@@ -47,12 +47,12 @@
       "via": "createdBy"
     },
     "ngos": {
-      "collection": "ngo",
-      "via": "members"
+      "collection": "member",
+      "via": "person"
     },
-    "demands": {
+    "demand": {
       "collection": "demand",
-      "via": "managers"
+      "via": "role"
     },
     "events": {
       "collection": "event",

@@ -21,7 +21,7 @@ module.exports = {
 
   /* Get a specific NGO.
    *
-   * @return {Object|Array}
+   * @return {Object}
    */
   findOne: function * () {
     this.model = model;
@@ -101,5 +101,21 @@ module.exports = {
     } catch (err) {
       this.body = err;
     }
-  }
+  },
+
+  /* Add an member to a specific NGO.
+   *
+   * @return {Object}
+   */
+  addMember: function * () {
+    this.model = model
+    console.info(this.model)
+    console.info(/\/ngos\/(\d)\/members\/(\d)/g.exec(this.request.path))
+    try {
+      let entry = yield strapi.hooks.blueprints.findOne(this);
+      this.body = {'msg': 'in contruction'};
+    } catch (err) {
+      this.body = err;
+    }
+  },
 };

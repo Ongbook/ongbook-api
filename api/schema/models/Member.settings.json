@@ -1,0 +1,22 @@
+{
+  "identity": "member",
+  "globaId": "member",
+  "autoPK": true,
+  "connection": "document",
+  "autoCreatedAt": true,
+  "autoUpdatedAt": true,
+  "tableName": "members",
+  "schema": true,
+  "displayedAttribute": "name",
+  "attributes": {
+    "ngo": {
+      "model": "ngo"
+    },
+    "person": {
+      "model": "user"
+    },
+    "role": {
+      "model": "role"
+    }
+  }
+}

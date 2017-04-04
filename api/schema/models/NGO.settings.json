@@ -119,9 +119,9 @@
     "makesOffer": {
       "type": "json"
     },
-    "members": {
-      "collection": "user",
-      "via": "ngos"
+    "member": {
+      "collection": "member",
+      "via": "person"
     },
     "memberOf": {
       "type": "json"

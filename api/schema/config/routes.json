@@ -17,10 +17,7 @@
     "POST /ngos": {
       "controller": "ngo",
       "action": "create",
-      "policies": [
-        "authorized",
-        "create"
-      ]
+      "policies": []
     },
     "PUT /ngos/:id": {
       "controller": "ngo",
@@ -37,13 +34,20 @@
         "authorized"
       ]
     },
+    "PUT /ngos/:id/members/:userId": {
+      "controller": "ngo",
+      "action": "addMember",
+      "policies": []
+    },
+    "DELETE /ngos/:id/members/:userId": {
+      "controller": "ngo",
+      "action": "removeMember",
+      "policies": []
+    },
     "POST /ngos/:parentId/:relation": {
       "controller": "ngo",
       "action": "add",
-      "policies": [
-        "authorized",
-        "create"
-      ]
+      "policies": []
     },
     "DELETE /ngos/:parentId/:relation/:id": {
       "controller": "ngo",
