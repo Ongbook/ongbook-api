@@ -1,5 +1,5 @@
 'use strict';
-/* global strapi/
+/* global strapi */
 
 /**
  * Creates default Roles
@@ -10,7 +10,7 @@ exports.create = function () {
       name: 'admin'
     }, {
       name: 'admin'
-    })
+    }),
     strapi.orm.collections.role.findOrCreate({
       name: 'user'
     }, {
