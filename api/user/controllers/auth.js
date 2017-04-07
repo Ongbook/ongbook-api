@@ -1,20 +1,11 @@
 'use strict';
-/* global strapi User */
+/* global strapi User Role */
 
 const crypto = require('crypto');
 const _ = require('lodash');
 const anchor = require('anchor');
 
-/**
- * Auth controller
- */
-
 module.exports = {
-
-  /**
-   * Main action for login
-   * both for local auth and provider auth.
-   */
 
   callback: function * () {
     const ctx = this;
@@ -24,7 +15,6 @@ module.exports = {
     const access_token = ctx.query.access_token;
 
     if (provider === 'local') {
-      // The identifier is required.
       if (!params.identifier) {
         ctx.status = 400;
         return ctx.body = {
@@ -32,7 +22,6 @@ module.exports = {
         };
       }
 
-      // The password is required.
       if (!params.password) {
         ctx.status = 400;
         return ctx.body = {
@@ -65,7 +54,6 @@ module.exports = {
           };
         }
 
-        // The user never registered with the `local` provider.
         if (!user.password) {
           ctx.status = 400;
           return ctx.body = {
@@ -73,7 +61,6 @@ module.exports = {
           };
         }
 
-        console.info(user);
         const validPassword = user.validatePassword(params.password);
 
         if (!validPassword) {
@@ -109,10 +96,6 @@ module.exports = {
     }
   },
 
-  /**
-   * Register endpoint for local user.
-   */
-
   register: function * () {
     const ctx = this;
     const params = _.assign(ctx.request.body, {
@@ -145,20 +128,20 @@ module.exports = {
 
       // Create the user
       let user = yield User.create(params);
+      // Find the roles
+      const roles = yield Role.find();
 
       // Check if the user is the first to register
       if (usersCount === 0) {
-        // Find the roles
-        const roles = yield Role.find();
-
         // Add the role `admin` to the current user
         user.roles.add(_.find(roles, {name: 'admin'}));
-
-        // Prevent double encryption.
-        delete user.password;
-
-        user = yield user.save();
+      } else {
+        user.roles.add(_.find(roles, {name: 'user'}));
       }
+
+      // Prevent double encryption.
+      delete user.password;
+      user = yield user.save();
 
       ctx.status = 200;
       ctx.body = {
