@@ -52,7 +52,7 @@
     "dataSource": "db",
     "public": false
   },
-  "Person": {
+  "LocalUser": {
     "dataSource": "db",
     "public": true
   }

@@ -1,6 +1,6 @@
 {
-  "name": "Person",
-  "plural": "people",
+  "name": "LocalUser",
+  "plural": "users",
   "base": "User",
   "idInjection": true,
   "options": {
@@ -13,7 +13,13 @@
     }
   },
   "validations": [],
-  "relations": {},
+  "relations": {
+    "ngos": {
+      "type": "hasMany",
+      "model": "NGO",
+      "foreignKey": "ngo_id"
+    }
+  },
   "acls": [],
   "methods": {}
 }
