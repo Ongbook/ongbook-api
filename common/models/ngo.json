@@ -26,41 +26,40 @@
       "type": "string"
     },
     "name": {
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "potentialAction": {
-      "type": "json"
+      "type": "object"
     },
     "url": {
       "type": "string"
     },
     "address": {
-      "type": "json"
+      "type": "object"
     },
     "aggregateRating": {
-      "type": "json"
+      "type": "object"
     },
     "alumni": {
-      "type": "json"
+      "type": "object"
     },
     "areaServed": {
-      "type": "json"
+      "type": "object"
     },
     "award": {
       "type": "string"
     },
     "brand": {
-      "type": "json"
+      "type": "object"
     },
     "contactPoint": {
-      "type": "json"
+      "type": "object"
     },
     "department": {
-      "type": "json"
+      "type": "object"
     },
     "dissolutionDate": {
-      "type": "date"
+      "type": "object"
     },
     "duns": {
       "type": "string"
@@ -69,35 +68,34 @@
       "type": "string"
     },
     "employee": {
-      "type": "json"
+      "type": "object"
     },
     "events": {
-      "collection": "event",
-      "via": "organizer"
+      "type": ["object"]
     },
     "faxNumber": {
       "type": "string"
     },
     "founder": {
-      "type": "json"
+      "type": "object"
     },
     "foundingDate": {
       "type": "date"
     },
     "foundingLocation": {
-      "type": "json"
+      "type": "object"
     },
     "funder": {
-      "type": "json"
+      "type": "object"
     },
     "globalLocationNumber": {
       "type": "string"
     },
     "hasOfferCatalog": {
-      "type": "json"
+      "type": "object"
     },
     "hasPOS": {
-      "type": "json"
+      "type": "object"
     },
     "isicV4": {
       "type": "string"
@@ -109,20 +107,19 @@
       "type": "string"
     },
     "location": {
-      "type": "json"
+      "type": "object"
     },
     "logo": {
       "type": "string"
     },
     "makesOffer": {
-      "type": "json"
+      "type": ["object"]
     },
     "member": {
-      "collection": "member",
-      "via": "person"
+      "type": ["object"]
     },
     "memberOf": {
-      "type": "json"
+      "type": "object"
     },
     "naics": {
       "type": "string"
@@ -131,23 +128,22 @@
       "type": "integer"
     },
     "owns": {
-      "type": "json"
+      "type": "object"
     },
     "parentOrganization": {
-      "type": "json"
+      "type": "object"
     },
     "review": {
-      "type": "json"
+      "type": "object"
     },
     "seeks": {
-      "collection": "demand",
-      "via": "seeker"
+      "type": "object"
     },
     "sponsor": {
-      "type": "json"
+      "type": "object"
     },
     "subOrganization": {
-      "type": "json"
+      "type": "object"
     },
     "taxID": {
       "type": "string"
@@ -157,6 +153,10 @@
     },
     "vatID": {
       "type": "string"
+    },
+    "complete": {
+      "type": "boolean",
+      "default": false
     }
   },
   "validations": [],
