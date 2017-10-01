@@ -1,0 +1,166 @@
+{
+  "name": "NGO",
+  "plural": "ngos",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "additionalType": {
+      "type": "string"
+    },
+    "alternateName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "disambiguatingDescription": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "mainEntityOfPage": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "potentialAction": {
+      "type": "json"
+    },
+    "url": {
+      "type": "string"
+    },
+    "address": {
+      "type": "json"
+    },
+    "aggregateRating": {
+      "type": "json"
+    },
+    "alumni": {
+      "type": "json"
+    },
+    "areaServed": {
+      "type": "json"
+    },
+    "award": {
+      "type": "string"
+    },
+    "brand": {
+      "type": "json"
+    },
+    "contactPoint": {
+      "type": "json"
+    },
+    "department": {
+      "type": "json"
+    },
+    "dissolutionDate": {
+      "type": "date"
+    },
+    "duns": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "employee": {
+      "type": "json"
+    },
+    "events": {
+      "collection": "event",
+      "via": "organizer"
+    },
+    "faxNumber": {
+      "type": "string"
+    },
+    "founder": {
+      "type": "json"
+    },
+    "foundingDate": {
+      "type": "date"
+    },
+    "foundingLocation": {
+      "type": "json"
+    },
+    "funder": {
+      "type": "json"
+    },
+    "globalLocationNumber": {
+      "type": "string"
+    },
+    "hasOfferCatalog": {
+      "type": "json"
+    },
+    "hasPOS": {
+      "type": "json"
+    },
+    "isicV4": {
+      "type": "string"
+    },
+    "legalName": {
+      "type": "string"
+    },
+    "leiCode": {
+      "type": "string"
+    },
+    "location": {
+      "type": "json"
+    },
+    "logo": {
+      "type": "string"
+    },
+    "makesOffer": {
+      "type": "json"
+    },
+    "member": {
+      "collection": "member",
+      "via": "person"
+    },
+    "memberOf": {
+      "type": "json"
+    },
+    "naics": {
+      "type": "string"
+    },
+    "numberOfEmployees": {
+      "type": "integer"
+    },
+    "owns": {
+      "type": "json"
+    },
+    "parentOrganization": {
+      "type": "json"
+    },
+    "review": {
+      "type": "json"
+    },
+    "seeks": {
+      "collection": "demand",
+      "via": "seeker"
+    },
+    "sponsor": {
+      "type": "json"
+    },
+    "subOrganization": {
+      "type": "json"
+    },
+    "taxID": {
+      "type": "string"
+    },
+    "telephone": {
+      "type": "string"
+    },
+    "vatID": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}
