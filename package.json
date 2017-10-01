@@ -29,7 +29,7 @@
     "type": "",
     "url": ""
   },
-  "license": "UNLICENSED",
+  "license": "MIT",
   "description": "ongbook-api",
   "maintainers": [
     {
@@ -37,6 +37,5 @@
       "email": "email+ongbook.org@gustavorps.net",
       "url": "https://github.com/GustavoRPS"
     }
-  ],
-  "license": "MIT"
+  ]
 }
