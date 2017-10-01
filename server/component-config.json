@@ -2,5 +2,10 @@
   "loopback-component-explorer": {
     "mountPath": "/explorer",
     "generateOperationScopedModels": true
+  },
+  "../node_modules/loopback-fixtures": {
+    "fixturePath": "/fixtures/",
+    "append": false,
+    "autoLoad": false
   }
 }
