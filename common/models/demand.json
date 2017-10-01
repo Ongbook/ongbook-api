@@ -1,0 +1,150 @@
+{
+  "name": "Demand",
+  "plural": "demands",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "additionalType": {
+      "type": "string"
+    },
+    "alternateName": {
+      "type": "string"
+    },
+    "description": {
+      "type": "string"
+    },
+    "disambiguatingDescription": {
+      "type": "string"
+    },
+    "image": {
+      "type": "string"
+    },
+    "mainEntityOfPage": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "potentialAction": {
+      "type": "object"
+    },
+    "url": {
+      "type": "string"
+    },
+    "acceptedPaymentMethod": {
+      "type": "object"
+    },
+    "advanceBookingRequirement": {
+      "type": "object"
+    },
+    "areaServed": {
+      "type": "object"
+    },
+    "availability": {
+      "type": "object"
+    },
+    "availabilityEnds": {
+      "type": "date"
+    },
+    "availabilityStarts": {
+      "type": "date"
+    },
+    "availableAtOrFrom": {
+      "type": "date"
+    },
+    "availableDeliveryMethod": {
+      "type": "object"
+    },
+    "businessFunction": {
+      "type": "object"
+    },
+    "deliveryLeadTime": {
+      "type": "object"
+    },
+    "eligibleCustomerType": {
+      "type": "object"
+    },
+    "eligibleDuration": {
+      "type": "object"
+    },
+    "eligibleQuantity": {
+      "type": "object"
+    },
+    "eligibleRegion": {
+      "type": "object"
+    },
+    "eligibleTransactionVolume": {
+      "type": "object"
+    },
+    "gtin12": {
+      "type": "string"
+    },
+    "gtin13": {
+      "type": "string"
+    },
+    "gtin14": {
+      "type": "string"
+    },
+    "gtin8": {
+      "type": "string"
+    },
+    "includesjson": {
+      "type": "object"
+    },
+    "ineligibleRegion": {
+      "type": "object"
+    },
+    "inventoryLevel": {
+      "type": "object"
+    },
+    "itemCondition": {
+      "type": "object"
+    },
+    "itemOffered": {
+      "type": "object"
+    },
+    "mpn": {
+      "type": "object"
+    },
+    "priceSpecification": {
+      "type": "object"
+    },
+    "seller": {
+      "type": "object"
+    },
+    "seeker": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "serialNumber": {
+      "type": "string"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "validFrom": {
+      "type": "date"
+    },
+    "validThrough": {
+      "type": "date"
+    },
+    "warranty": {
+      "type": "object"
+    },
+    "role": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

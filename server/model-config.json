@@ -41,5 +41,9 @@
   "NGO": {
     "dataSource": "db",
     "public": true
+  },
+  "Demand": {
+    "dataSource": "db",
+    "public": true
   }
 }
