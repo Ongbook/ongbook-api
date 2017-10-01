@@ -9,6 +9,7 @@
     "lint": "eslint .",
     "start": "node .",
     "posttest": "npm run lint && nsp check",
+    "develop": "./node_modules/nodemon/bin/nodemon.js --debug .",
     "test-api": "./node_modules/dredd/bin/dredd openapi.yaml http://localhost:3000/v1"
   },
   "dependencies": {
@@ -19,6 +20,7 @@
     "loopback": "^3.0.0",
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^5.0.0",
+    "loopback-connector-mongodb": "^3.2.1",
     "serve-favicon": "^2.0.1",
     "strong-error-handler": "^2.0.0"
   },
@@ -26,6 +28,7 @@
     "dredd": "^4.5.0",
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0",
+    "nodemon": "^1.12.1",
     "nsp": "^2.1.0"
   },
   "repository": {

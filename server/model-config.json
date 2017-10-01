@@ -14,46 +14,46 @@
     ]
   },
   "User": {
-    "dataSource": "db",
+    "dataSource": "document",
     "public": false
   },
   "AccessToken": {
-    "dataSource": "db",
+    "dataSource": "document",
     "public": false
   },
   "ACL": {
-    "dataSource": "db",
+    "dataSource": "document",
     "public": false
   },
   "RoleMapping": {
-    "dataSource": "db",
+    "dataSource": "document",
     "public": false,
     "options": {
       "strictObjectIDCoercion": true
     }
   },
   "Role": {
-    "dataSource": "db",
+    "dataSource": "document",
     "public": false
   },
   "NGO": {
-    "dataSource": "db",
+    "dataSource": "document",
     "public": true
   },
   "Demand": {
-    "dataSource": "db",
+    "dataSource": "document",
     "public": true
   },
   "Thing": {
-    "dataSource": "db",
+    "dataSource": "document",
     "public": false
   },
   "Organization": {
-    "dataSource": "db",
+    "dataSource": "document",
     "public": false
   },
   "LocalUser": {
-    "dataSource": "db",
+    "dataSource": "document",
     "public": true
   }
 }
