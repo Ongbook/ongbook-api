@@ -36,9 +36,6 @@
     "dataSource": "db",
     "public": false
   },
-  "Note": {
-    "dataSource": "db"
-  },
   "NGO": {
     "dataSource": "db",
     "public": true
