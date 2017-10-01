@@ -1,6 +1,6 @@
 {
   "name": "ongbook-api",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "main": "server/server.js",
   "engines": {
     "node": ">=4"
@@ -8,7 +8,8 @@
   "scripts": {
     "lint": "eslint .",
     "start": "node .",
-    "posttest": "npm run lint && nsp check"
+    "posttest": "npm run lint && nsp check",
+    "test-api": "./node_modules/dredd/bin/dredd openapi.yaml http://localhost:3000/v1"
   },
   "dependencies": {
     "bcrypt": "^1.0.3",
@@ -22,20 +23,21 @@
     "strong-error-handler": "^2.0.0"
   },
   "devDependencies": {
+    "dredd": "^4.5.0",
     "eslint": "^3.17.1",
     "eslint-config-loopback": "^8.0.0",
     "nsp": "^2.1.0"
   },
   "repository": {
-    "type": "",
-    "url": ""
+    "type": "git",
+    "url": "https://github.com/Ongbook/ongbook-api/"
   },
   "license": "MIT",
   "description": "ongbook-api",
   "maintainers": [
     {
       "name": "GustavoRPS",
-      "email": "email+ongbook.org@gustavorps.net",
+      "email": "gustavorps@ongbook.org",
       "url": "https://github.com/GustavoRPS"
     }
   ]
