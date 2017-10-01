@@ -1,6 +1,6 @@
 {
-  "name": "Demand",
-  "plural": "demands",
+  "name": "Thing",
+  "plural": "things",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -34,116 +34,144 @@
     "url": {
       "type": "string"
     },
-    "acceptedPaymentMethod": {
+    "address": {
       "type": "object"
     },
-    "advanceBookingRequirement": {
+    "aggregateRating": {
+      "type": "object"
+    },
+    "alumni": {
       "type": "object"
     },
     "areaServed": {
       "type": "object"
     },
-    "availability": {
+    "award": {
+      "type": "string"
+    },
+    "brand": {
       "type": "object"
     },
-    "availabilityEnds": {
+    "contactPoint": {
+      "type": "object"
+    },
+    "department": {
+      "type": "object"
+    },
+    "dissolutionDate": {
+      "type": "object"
+    },
+    "duns": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    },
+    "employee": {
+      "type": "object"
+    },
+    "events": {
+      "type": [
+        "object"
+      ]
+    },
+    "faxNumber": {
+      "type": "string"
+    },
+    "founder": {
+      "type": "object"
+    },
+    "foundingDate": {
       "type": "date"
     },
-    "availabilityStarts": {
-      "type": "date"
-    },
-    "availableAtOrFrom": {
-      "type": "date"
-    },
-    "availableDeliveryMethod": {
+    "foundingLocation": {
       "type": "object"
     },
-    "businessFunction": {
+    "funder": {
       "type": "object"
     },
-    "deliveryLeadTime": {
-      "type": "object"
-    },
-    "eligibleCustomerType": {
-      "type": "object"
-    },
-    "eligibleDuration": {
-      "type": "object"
-    },
-    "eligibleQuantity": {
-      "type": "object"
-    },
-    "eligibleRegion": {
-      "type": "object"
-    },
-    "eligibleTransactionVolume": {
-      "type": "object"
-    },
-    "gtin12": {
+    "globalLocationNumber": {
       "type": "string"
     },
-    "gtin13": {
+    "hasOfferCatalog": {
+      "type": "object"
+    },
+    "hasPOS": {
+      "type": "object"
+    },
+    "isicV4": {
       "type": "string"
     },
-    "gtin14": {
+    "legalName": {
       "type": "string"
     },
-    "gtin8": {
+    "leiCode": {
       "type": "string"
     },
-    "includesjson": {
+    "location": {
       "type": "object"
     },
-    "ineligibleRegion": {
-      "type": "object"
-    },
-    "inventoryLevel": {
-      "type": "object"
-    },
-    "itemCondition": {
-      "type": "object"
-    },
-    "itemOffered": {
-      "type": "object"
-    },
-    "mpn": {
-      "type": "object"
-    },
-    "priceSpecification": {
-      "type": "object"
-    },
-    "seller": {
-      "type": "object"
-    },
-    "serialNumber": {
+    "logo": {
       "type": "string"
     },
-    "sku": {
-      "type": "string"
+    "makesOffer": {
+      "type": [
+        "object"
+      ]
     },
-    "validFrom": {
-      "type": "date"
+    "member": {
+      "type": [
+        "object"
+      ]
     },
-    "validThrough": {
-      "type": "date"
-    },
-    "warranty": {
+    "memberOf": {
       "type": "object"
     },
-    "role": {
-      "type": "array",
-      "items": {
-        "type": "object"
-      }
+    "naics": {
+      "type": "string"
+    },
+    "numberOfEmployees": {
+      "type": "integer"
+    },
+    "owns": {
+      "type": "object"
+    },
+    "parentOrganization": {
+      "type": "object"
+    },
+    "review": {
+      "type": "object"
+    },
+    "seeks": {
+      "type": "object"
+    },
+    "sponsor": {
+      "type": "object"
+    },
+    "subOrganization": {
+      "type": "object"
+    },
+    "taxID": {
+      "type": "string"
+    },
+    "telephone": {
+      "type": "string"
+    },
+    "vatID": {
+      "type": "string"
+    },
+    "complete": {
+      "type": "boolean",
+      "default": false
     }
   },
   "validations": [],
   "relations": {
-    "seeker": {
-      "type": "belongsTo",
-      "model": "Thing",
-      "foreignKey": "seeker_id"
-    } 
+    "demands": {
+      "type": "hasAndBelongsToMany",
+      "model": "Demand",
+      "foreignKey": ""
+    }
   },
   "acls": [],
   "methods": {}

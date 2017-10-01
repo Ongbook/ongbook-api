@@ -45,5 +45,13 @@
   "Demand": {
     "dataSource": "db",
     "public": true
+  },
+  "Thing": {
+    "dataSource": "db",
+    "public": false
+  },
+  "Organization": {
+    "dataSource": "db",
+    "public": false
   }
 }

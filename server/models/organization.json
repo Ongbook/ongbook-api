@@ -1,12 +1,16 @@
 {
-  "name": "NGO",
-  "plural": "ngos",
-  "base": "Organization",
+  "name": "Organization",
+  "plural": "organizations",
+  "base": "Thing",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "properties": {},
+  "properties": {
+    "name": {
+      "type": "string"
+    }
+  },
   "validations": [],
   "relations": {},
   "acls": [],
