@@ -131,7 +131,7 @@
       "type": "string"
     },
     "numberOfEmployees": {
-      "type": "integer"
+      "type": "number"
     },
     "owns": {
       "type": "object"
