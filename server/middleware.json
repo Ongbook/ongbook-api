@@ -6,8 +6,8 @@
     "compression": {},
     "cors": {
       "params": {
-        "origin": true,
-        "credentials": true,
+        "origin": false,
+        "credentials": false,
         "maxAge": 86400
       }
     },

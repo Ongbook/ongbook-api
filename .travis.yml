@@ -1,15 +1,14 @@
 sudo: false
 language: node_js
 node_js:
-  - "6"
+  - '6'
 cache:
   directories:
-    - "node_modules"
+    - node_modules
 before_install:
-  - "npm -g install npm@latest"
+  - npm -g install npm@latest
+  - npm install -g dredd@4.5.0
 install:
-  - "npm install --no-optional"
+  - npm install --no-optional
 before_script:
-  - "npm info dredd version"
-script:
-    - "npm start & npm run test-api"
+  - dredd

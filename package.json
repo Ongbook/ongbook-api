@@ -10,7 +10,7 @@
     "start": "node .",
     "posttest": "npm run lint && nsp check",
     "develop": "./node_modules/nodemon/bin/nodemon.js --debug .",
-    "test-api": "./node_modules/dredd/bin/dredd openapi.yaml http://localhost:3000/v1"
+    "test-api": "./node_modules/dredd/bin/dredd"
   },
   "dependencies": {
     "bcrypt": "^1.0.3",
